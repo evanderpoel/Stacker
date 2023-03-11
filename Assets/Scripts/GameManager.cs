@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mainMenuUI;
     [SerializeField] private GameObject stackHandler;
     [SerializeField] private GameObject background;
+    [SerializeField] private TMP_Text scoreUI;
+    [SerializeField] private GameObject inGameUI;
 
     private Vector3 userSquarePosition;
     private Vector3 userSquareScale;
@@ -20,6 +23,8 @@ public class GameManager : MonoBehaviour
     private Vector3 rightColliderPosition;
     private Vector3 mainCameraPosition;
     private Vector3 backgroundPosition;
+
+    public static List<GameObject> centerColumns = new List<GameObject>();
     
     void Start()
     {
@@ -35,6 +40,7 @@ public class GameManager : MonoBehaviour
     public void restGame()
     {
         resetGameState();
+        //inGameUI.SetActive(true);
     }
 
     public void gameOverToMainMenu()
@@ -54,6 +60,11 @@ public class GameManager : MonoBehaviour
         mainCamera.transform.position = mainCameraPosition;
         gameOverUI.SetActive(false);
         background.transform.position = backgroundPosition;
+        scoreUI.text = "0";
+        foreach (var column in centerColumns)
+        {
+            Destroy(column);   
+        }
     }
 
 }

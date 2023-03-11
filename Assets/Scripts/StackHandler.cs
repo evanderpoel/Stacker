@@ -65,7 +65,7 @@ public class StackHandler : MonoBehaviour
             }
             else
             {
-
+                GameManager.centerColumns.Add(CenterColumn);
                 GameObject dup = GameObject.Instantiate(CenterColumn);
                 LeftCollider.GetComponent<LeftCollider>().centerColumn = dup;
                 RightCollider.GetComponent<RightCollider>().centerColumn = dup;

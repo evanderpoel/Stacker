@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject inGameUI;
     
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         highScore.text = PlayerPrefs.GetInt("highScore", 0).ToString();
         int current = Int32.Parse(currentScore.text);

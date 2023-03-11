@@ -2274,7 +2274,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1152840163}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: resetGameState
+        m_MethodName: restGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3168,7 +3168,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 908511057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1152840163}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: gameOverToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &908511057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4146,6 +4158,12 @@ MonoBehaviour:
   leftCollider: {fileID: 1464439072}
   rightCollider: {fileID: 735087611}
   mainCamera: {fileID: 519420028}
+  gameOverUI: {fileID: 2053956183}
+  mainMenuUI: {fileID: 1277896194}
+  stackHandler: {fileID: 93641999}
+  background: {fileID: 334221080}
+  scoreUI: {fileID: 1984446687}
+  inGameUI: {fileID: 1258644563}
 --- !u!4 &1152840164
 Transform:
   m_ObjectHideFlags: 0
