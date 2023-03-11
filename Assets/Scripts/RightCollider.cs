@@ -21,6 +21,6 @@ public class RightCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        centerColumn.transform.Translate(0.01f, 0, 0);
+        centerColumn.transform.Translate(0.01f * StackHandler.multiplier, 0, 0);
     }
 }
